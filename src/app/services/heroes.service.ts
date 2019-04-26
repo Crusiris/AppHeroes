@@ -48,4 +48,8 @@ export class HeroesService {
     let url = `${this.firesURL}/${key$}.json`;
     return this.httpclient.get(url).pipe(map(res => res));
   }
+
+  getHeroes() {
+    return this.httpclient.get(this.fireURL).pipe(map(res => res));
+  }
 }
