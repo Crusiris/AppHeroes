@@ -8,11 +8,15 @@ import { HeroesService } from "../../services/heroes.service";
 })
 export class HeroesComponent implements OnInit {
   heroes: any;
+  loading: boolean = true;
 
   constructor(private heroesService: HeroesService) {
     this.heroesService.getHeroes().subscribe(data => {
-      console.log(data);
-      this.heroes = data;
+      // this.loading = false;
+      setTimeout(() => {
+        this.loading = false;
+        this.heroes = data;
+      }, 1000);
     });
   }
 

@@ -37,15 +37,17 @@
               </button>
             </td>
           </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
         </tbody>
 
       </table>
+
+      <div *ngIf="(heroes| keys).length===0 && !loading" class="alert alert-info" role="alert">
+        <strong> No Existen </strong> Registro que mostrar
+      </div>
+
+      <div *ngIf="loading" class="alert alert-info" role="alert">
+        <strong> Cargando ...</strong> Por favor espere
+      </div>
 
     </div>
 
