@@ -4,20 +4,23 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Layout One
 
-![AppHeroe]()
+![AppHeroe](https://github.com/Crusiris/AppHeroes/blob/master/src/assets/img/No%20existe%20registro.PNG)
 
 ## Layout Two
 
-![AppHeroe]()
+![AppHeroe](https://github.com/Crusiris/AppHeroes/blob/master/src/assets/img/guardando.PNG)
 
 ## Development server
 
 ## Layout Three
 
-![AppHeroe]()
+![AppHeroe](https://github.com/Crusiris/AppHeroes/blob/master/src/assets/img/guardada.PNG)
 
 ## Layout Four
 
+![AppHeroe](https://github.com/Crusiris/AppHeroes/blob/master/src/assets/img/eliminando.PNG)
+
+##Layout Five
 ![AppHeroe]()
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
