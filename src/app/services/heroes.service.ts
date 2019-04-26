@@ -2,7 +2,6 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Heroe } from "../interface/heroe.interface";
 import { map } from "rxjs/operators";
-import { KeyRegistry } from "@angular/core/src/di/reflective_key";
 
 @Injectable({
   providedIn: "root"
@@ -43,5 +42,10 @@ export class HeroesService {
         return res;
       })
     );
+  }
+
+  getHeroe(key$: string) {
+    let url = `${this.firesURL}/${key$}.json`;
+    return this.httpclient.get(url).pipe(map(res => res));
   }
 }

@@ -25,7 +25,14 @@ export class HeroeComponent {
     private router: Router,
     private actRoute: ActivatedRoute
   ) {
-    this.actRoute.params.subscribe(parametros => (this.id = parametros["id"]));
+    this.actRoute.params.subscribe(parametros => {
+      this.id = parametros["id"];
+      if (this.id !== "nuevo") {
+        this._heroesService
+          .getHeroe(this.id)
+          .subscribe((data: Heroe) => (this.heroe = data));
+      }
+    });
   }
 
   guardar() {
@@ -50,5 +57,20 @@ export class HeroeComponent {
         error => console.error(error)
       );
     }
+  }
+
+  // agregarNuevo(forma: NgForm) {
+  //   this.router.navigate(["/heroe", "nuevo"]);
+  //   // forma.reset();
+
+  //   // this.router.navigate(["/heroe", "new"]);
+  //   // forma.onReset();
+
+  agregarNuevo(forma: NgForm) {
+    this.router.navigate(["/heroe", "nuevo"]);
+
+    forma.reset({
+      casa: "Marvel"
+    });
   }
 }
